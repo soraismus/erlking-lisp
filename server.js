@@ -8,11 +8,11 @@ var fs      = require('fs');
 var http    = require('http');
 var path    = require('path');
 
-var herokuHost   = 'todomvc-reactive-aspen.herokuapp.com';
+var herokuHost   = 'erlking-lisp-console.herokuapp.com';
 var isProduction = !!(process.env.NODE_ENV === 'production');
 var host         = isProduction ? herokuHost : 'localhost';
 
-var fiveMin    = 5 * 60 * 1000;
+var oneHour    = 60 * 60 * 1000;
 var httpConfig = { host: host };
 var port       = process.env.PORT || 5000;
 var utf8       = { encoding: 'utf8' };
@@ -31,11 +31,11 @@ function onStart() {
 }
 
 function pingHeroku() {
-  //http.get(httpConfig);
+  http.get(httpConfig);
 }
 
 function preventHerokuSleep() {
-  setInterval(pingHeroku, fiveMin);
+  setInterval(pingHeroku, oneHour);
   console.log('Pinging app to prevent spin-down.');
 }
 
