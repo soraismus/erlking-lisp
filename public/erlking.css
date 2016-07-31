@@ -56,12 +56,11 @@ body {
 
 .head h1 {
   color: rgb(0, 190, 0);
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
 .head h4 {
   color: rgb(0, 150, 0);
-  font-size: 1.5em;
 }
 
 .head h1, .head h4 {
@@ -88,7 +87,6 @@ body {
 }
 
 .erl-viewport {
-  font-size: 1.35em;
   height: 94%;
   margin: 15px 20px;
   overflow: auto;
